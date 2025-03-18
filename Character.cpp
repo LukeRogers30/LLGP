@@ -6,8 +6,8 @@ float Character::moveChar(CircleShape& character)
     if (Keyboard::isKeyPressed(Keyboard::Key::D))
     {
         m_directionX = -1;
-        m_isFacingRight = true;
         m_currentVelocX = m_currentVelocX + m_accel;
+        m_isFacingRight = true;
         if (m_currentVelocX > m_maxVelocX)
         {
             m_currentVelocX = m_maxVelocX;
@@ -18,9 +18,9 @@ float Character::moveChar(CircleShape& character)
         m_directionX = 1;
         m_currentVelocX = m_currentVelocX - m_accel;
         m_isFacingRight = false;
-        if (m_currentVelocX < m_maxVelocX * -1.f)
+        if (m_currentVelocX < (m_maxVelocX * -1.f))
         {
-            m_currentVelocX = (m_maxVelocX * -1.f) * dt.asSeconds();
+            m_currentVelocX = (m_maxVelocX * -1.f);
         }
     }
     else
