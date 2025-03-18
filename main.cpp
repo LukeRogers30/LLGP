@@ -24,12 +24,12 @@ int WinMain()
 
     Character player;
 
-    const Image characters("assets/fly1.png");
+    const Image characters("assets/joustSpriteSheet.png");
     Texture characterText;
 
-    bool result = characterText.loadFromImage(characters, false, IntRect({ 0, 0}, {192, 112 }));
+    bool result = characterText.loadFromImage(characters, false, IntRect({ 0, 0}, {32, 64 }));
     Sprite spritey(characterText);
-    spritey.scale({ 2.f, 2.f });
+    spritey.scale({ 4.f, 4.f });
 
     while (window.isOpen())
     {
