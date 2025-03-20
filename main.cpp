@@ -25,11 +25,11 @@ int WinMain()
 
     Character player;
     Timer timer;
-<<<<<<< Updated upstream
+
 
     while (window.isOpen())
     {
-<<<<<<< Updated upstream
+
         // Event polling section of code - this must be done in the thread which created the window
         // we will talk about threading later, but essentially this must be done here
         while (const optional event = window.pollEvent())
@@ -38,8 +38,7 @@ int WinMain()
                 window.close();
         }
 
-=======
-=======
+
 
     const Image characters("assets/joustSpriteSheet.png");
     Texture characterText;
@@ -66,11 +65,11 @@ int WinMain()
 
     while (window.isOpen())
     {
->>>>>>> Stashed changes
+
         timer.UpdateTimer(currentTime, deltaTime, lastTime, timeSincePhysicsStep, physicsTimeStep, totalTimeFixed,
                           timeSinceTick, tickLength, window, totalTimeTicked, totalTimeFree);
         
->>>>>>> Stashed changes
+
         player.moveChar(circle);
 
         window.clear();
