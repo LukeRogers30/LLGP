@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Character.h"
+#include "Timer.h"
 using namespace sf;
 using namespace std;
 
@@ -23,9 +24,11 @@ int WinMain()
     circle.setTextureRect(IntRect({ 10, 10 }, { 100, 100 }));
 
     Character player;
+    Timer timer;
 
     while (window.isOpen())
     {
+<<<<<<< Updated upstream
         // Event polling section of code - this must be done in the thread which created the window
         // we will talk about threading later, but essentially this must be done here
         while (const optional event = window.pollEvent())
@@ -34,6 +37,11 @@ int WinMain()
                 window.close();
         }
 
+=======
+        timer.UpdateTimer(currentTime, deltaTime, lastTime, timeSincePhysicsStep, physicsTimeStep, totalTimeFixed,
+                          timeSinceTick, tickLength, window, totalTimeTicked, totalTimeFree);
+        
+>>>>>>> Stashed changes
         player.moveChar(circle);
 
         window.clear();
