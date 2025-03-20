@@ -137,10 +137,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Gamemode.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
+    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Gamemode.h" />
+    <ClInclude Include="LevelManager.h" />
     <ClInclude Include="packages\SFML\include\SFML\Audio.hpp" />
     <ClInclude Include="packages\SFML\include\SFML\Audio\AudioResource.hpp" />
     <ClInclude Include="packages\SFML\include\SFML\Audio\Export.hpp" />
@@ -242,6 +255,9 @@
     <ClInclude Include="packages\SFML\include\SFML\Window\WindowBase.hpp" />
     <ClInclude Include="packages\SFML\include\SFML\Window\WindowEnums.hpp" />
     <ClInclude Include="packages\SFML\include\SFML\Window\WindowHandle.hpp" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="SpriteManager.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages\SFML\include\SFML\Audio\SoundFileFactory.inl" />
