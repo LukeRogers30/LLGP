@@ -25,6 +25,7 @@ int WinMain()
 
     Character player;
     Timer timer;
+<<<<<<< Updated upstream
 
     while (window.isOpen())
     {
@@ -38,6 +39,34 @@ int WinMain()
         }
 
 =======
+=======
+
+    const Image characters("assets/joustSpriteSheet.png");
+    Texture characterText;
+
+    bool result = characterText.loadFromImage(characters, false, IntRect({ 0, 0}, {32, 64 }));
+    Sprite spritey(characterText);
+    spritey.scale({ 4.f, 4.f });
+
+    
+    // Time Stuff
+    int totalTimeFixed = 0;
+    int totalTimeTicked = 0;
+    int totalTimeFree = 0;
+
+    chrono::steady_clock::time_point lastTime = chrono::steady_clock::now();
+    chrono::steady_clock::time_point currentTime;
+
+    float deltaTime = 0.0f;
+    float physicsTimeStep = 20000.0f;
+    float tickLength = 10000.0f;
+    float timeSincePhysicsStep = 0.0f;
+    float timeSinceTick = 0.0f;
+
+
+    while (window.isOpen())
+    {
+>>>>>>> Stashed changes
         timer.UpdateTimer(currentTime, deltaTime, lastTime, timeSincePhysicsStep, physicsTimeStep, totalTimeFixed,
                           timeSinceTick, tickLength, window, totalTimeTicked, totalTimeFree);
         
