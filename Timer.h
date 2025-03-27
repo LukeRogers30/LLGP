@@ -12,7 +12,7 @@ public:
     float UpdateTimer(chrono::steady_clock::time_point currentTime, float deltaTime,
         chrono::steady_clock::time_point lastTime, float timeSincePhysicsStep,
         float physicsTimeStep, int totalTimeFixed, int timeSinceTick, float tickLength,
-        RenderWindow window, int totalTimeTicked, int totalTimeFree);
+        RenderWindow & window, int totalTimeTicked, int totalTimeFree);
 
     // Time Stuff
     int totalTimeFixed = 0;

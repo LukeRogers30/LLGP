@@ -1,26 +1,26 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <iostream>
-using namespace sf;
-using namespace std;
-class Entity
+#include "Entity.h"
+class Player
 {
 public:
-	Entity();
-	virtual ~Entity();
 
-	void setStats();
+	Player();
+	virtual ~Player();
 
 private:
 
-	// Sprite and Animation?
-    Image m_eImage;
-    Texture m_eTexture;
+	void setStats();
+	Entity xWing;
 
-    bool result = m_eTexture.loadFromImage(m_eImage, false, IntRect({ 0, 0 }, { 32, 64 }));
-    //Sprite m_eSprite;
+	//Initialise Variables
+		// Sprite and Animation?
+	Image m_eImage;
+	Texture m_eTexture;
 
-    // Movement
+	bool result = m_eTexture.loadFromImage(m_eImage, false, IntRect({ 0, 0 }, { 32, 64 }));
+	//Sprite m_eSprite;
+
+	// Movement
 	float m_accel;
 	float m_currentVelocX = 0.0f;
 	float m_maxVelocX;
@@ -34,16 +34,16 @@ private:
 
 	bool m_isGrounded;
 
-    // Health 
+	// Health 
 	float m_maxHP;
 	float m_currentHP;
 	float m_regenStrength;
 	float m_regenRate;
-	
+
 	float m_maxLives;
 	float m_currentLives;
 
-    // Damage
+	// Damage
 	float m_contactDamage;
 	float m_laserDamage;
 	float m_bombDamage;
