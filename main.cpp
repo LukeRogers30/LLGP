@@ -43,7 +43,7 @@ int WinMain()
 
 
         //const Image characters("assets/joustSpriteSheet.png");
-        Texture characterText;
+        //Texture characterText;
 
         //bool result = characterText.loadFromImage(characters, false, IntRect({ 0, 0}, {32, 64 }));
         //Sprite spritey(characterText);
@@ -71,8 +71,8 @@ int WinMain()
             timer.UpdateTimer(currentTime, deltaTime, lastTime, timeSincePhysicsStep, physicsTimeStep, totalTimeFixed,
                 timeSinceTick, tickLength, window, totalTimeTicked, totalTimeFree);
 
-            XWing.setSprite(XWing);
-            XWing.Input(XWing);
+            //XWing.setSprite(XWing);
+            //XWing.Input(XWing);
 
 
             //player.moveChar(circle);

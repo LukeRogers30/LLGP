@@ -2,7 +2,10 @@
 
 Player::Player()
 {
-	
+    bool result = m_eTexture->loadFromFile("assets/XWingSprites.png", false, IntRect({0, 0}, {32, 64}));
+    m_eSprite.setTexture(*m_eTexture);
+
+    
 }
 
 Player::~Player()
@@ -42,13 +45,16 @@ void Player::setStats(Player& XWing)                                            
 
 void setSprite(Player& XWing)                                                                                   //Sprite
 {
-    const Image playerImage("assets/XWingSprites.png");
-    Texture playerText;
 
-    bool result = playerText.loadFromImage(playerImage, false, IntRect({ 0, 0 }, { 32, 64 }));
-    Sprite playerSprite(playerText);
-    playerSprite.scale({ 4.f, 4.f });
-    XWing.m_eSprite = playerSprite;
+    //const Image playerImage("assets/XWingSprites.png");
+    //Texture playerText;
+
+    //bool result = playerText.loadFromImage(playerImage, false, IntRect({ 0, 0 }, { 32, 64 }));
+    //Sprite playerSprite(playerText);
+    //playerSprite.scale({ 4.f, 4.f });
+    //XWing.m_eSprite = playerSprite;
+    
+    //XWing.m_eSprite.setTexture(m_eTexture);
 }
 
 void Player::Input(Player& XWing)                                                                               //Input

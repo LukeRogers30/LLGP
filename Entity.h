@@ -7,18 +7,20 @@ class Entity : public Transformable
 {
 public:
 
-
+	Entity();
+	~Entity();
 	void setStats();
 	//void moveEntity(Entity);
 
 
 
 	// Sprite and Animation?
-    Image m_eImage;
-    Texture m_eTexture;
-	Sprite m_eSprite;
-
-    bool result = m_eTexture.loadFromImage(m_eImage, false, IntRect({ 0, 0 }, { 32, 64 }));
+    std::unique_ptr<Texture> m_eTexture = std::make_unique<Texture>();
+	Sprite m_eSprite = Sprite(*m_eTexture);
+	float m_rectHeight;
+	float m_rectWidth;
+	Vector2<float> m_rectSize = Vector2<float>(m_rectWidth, m_rectHeight);
+	//RectangleShape m_eShape(m_rectSize);
     //Sprite m_eSprite;
 
     // Movement
