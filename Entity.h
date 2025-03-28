@@ -3,19 +3,20 @@
 #include <iostream>
 using namespace sf;
 using namespace std;
-class Entity
+class Entity : public Transformable
 {
 public:
-	Entity();
-	virtual ~Entity();
+
 
 	void setStats();
+	//void moveEntity(Entity);
 
-private:
+
 
 	// Sprite and Animation?
     Image m_eImage;
     Texture m_eTexture;
+	Sprite m_eSprite;
 
     bool result = m_eTexture.loadFromImage(m_eImage, false, IntRect({ 0, 0 }, { 32, 64 }));
     //Sprite m_eSprite;
@@ -30,9 +31,9 @@ private:
 	float m_maxVelocY;
 
 	int m_directionX;
+	int m_directionY;
 	bool m_isFacingRight;
 
-	bool m_isGrounded;
 
     // Health 
 	float m_maxHP;
@@ -40,8 +41,8 @@ private:
 	float m_regenStrength;
 	float m_regenRate;
 	
-	float m_maxLives;
-	float m_currentLives;
+	int m_maxLives;
+	int m_currentLives;
 
     // Damage
 	float m_contactDamage;
@@ -49,4 +50,5 @@ private:
 	float m_bombDamage;
 
 };
+
 
